@@ -50,7 +50,7 @@
 		<dependency>
 			<groupId>org.projectlombok</groupId>
 			<artifactId>lombok</artifactId>
-			<version>1.16.22</version>
+			<version>1.18.26</version>
 			<optional>true</optional>
 		</dependency>
 		<dependency>
@@ -116,6 +116,15 @@
 					<compilerArgs>
 						<arg>--add-opens=java.base/java.lang=ALL-UNNAMED</arg>
 					</compilerArgs>
+				</configuration>
+			</plugin>
+			<plugin>
+				<groupId>com.heroku.sdk</groupId>
+				<artifactId>heroku-maven-plugin</artifactId>
+				<version>3.0.3</version>
+				<configuration>
+					<appName>sd-school</appName>
+					<!-- Other configuration options if needed -->
 				</configuration>
 			</plugin>
 		</plugins>
