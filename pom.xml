@@ -20,9 +20,6 @@
 		<maven.compiler.source>17</maven.compiler.source>
 		<maven.compiler.target>17</maven.compiler.target>
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-		<maven.compiler.source>17</maven.compiler.source>
-		<maven.compiler.target>17</maven.compiler.target>
-
 	</properties>
 
 	<dependencies>
@@ -41,6 +38,7 @@
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter-thymeleaf</artifactId>
+			<version>3.1.1-SNAPSHOT</version>
 		</dependency>
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
@@ -93,26 +91,12 @@
 
 	<build>
 		<plugins>
-<!--			<plugin>-->
-<!--				<groupId>org.springframework.boot</groupId>-->
-<!--				<artifactId>spring-boot-maven-plugin</artifactId>-->
-<!--				<configuration>-->
-<!--					<excludes>-->
-<!--						<exclude>-->
-<!--							<groupId>org.projectlombok</groupId>-->
-<!--							<artifactId>lombok</artifactId>-->
-<!--						</exclude>-->
-<!--					</excludes>-->
-<!--				</configuration>-->
-<!--			</plugin>-->
 			<plugin>
 				<groupId>org.apache.maven.plugins</groupId>
 				<artifactId>maven-compiler-plugin</artifactId>
 				<version>3.8.1</version>
 				<configuration>
 					<release>17</release>
-					<fork>true</fork>
-					<executable>C:\Program Files\Java\jdk-17\bin\javac</executable>
 					<compilerArgs>
 						<arg>--add-opens=java.base/java.lang=ALL-UNNAMED</arg>
 					</compilerArgs>
@@ -124,7 +108,7 @@
 				<version>3.0.3</version>
 				<configuration>
 					<appName>sd-school</appName>
-					<!-- Other configuration options if needed -->
+					<!-- Другие опции конфигурации, если необходимо -->
 				</configuration>
 			</plugin>
 		</plugins>
