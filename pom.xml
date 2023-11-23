@@ -109,6 +109,9 @@
 					<release>17</release>
 					<fork>true</fork>
 					<executable>C:\Program Files\Java\jdk-17\bin\javac</executable>
+					<compilerArgs>
+						<arg>--add-opens=java.base/java.lang=ALL-UNNAMED</arg>
+					</compilerArgs>
 				</configuration>
 			</plugin>
 		</plugins>
