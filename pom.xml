@@ -19,6 +19,18 @@
 		<maven.compiler.source>11</maven.compiler.source>
 		<maven.compiler.target>11</maven.compiler.target>
 	</properties>
+	<proxies>
+		<proxy>
+			<id>example-proxy</id>
+			<active>true</active>
+			<protocol>http</protocol>
+			<host>proxy.example.com</host>
+			<port>8080</port>
+			<username>proxyuser</username>
+			<password>somepassword</password>
+			<nonProxyHosts>www.google.com|*.example.com</nonProxyHosts>
+		</proxy>
+	</proxies>
 	<dependencies>
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
