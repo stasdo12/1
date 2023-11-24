@@ -9,6 +9,10 @@ import org.springframework.context.annotation.Bean;
 public class SchoolApplication {
 
 	public static void main(String[] args) {
+		String port = System.getenv("PORT");
+		if (port == null) {
+			port = "8080";
+		}
 		SpringApplication.run(SchoolApplication.class, args);
 	}
 
