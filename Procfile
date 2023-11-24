@@ -1,1 +1,1 @@
-web: java -Dserver.port=$PORT -jar target/project-name-1.0.jar
+web: java -Dserver.port=8080 -jar target/School-0.0.1-SNAPSHOT.jar
