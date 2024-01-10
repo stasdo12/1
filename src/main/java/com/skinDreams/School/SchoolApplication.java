@@ -11,7 +11,7 @@ public class SchoolApplication {
 	public static void main(String[] args) {
 		String port = System.getenv("PORT");
 		if (port == null) {
-			port = "8080";
+			port = "5000";
 		}
 		SpringApplication.run(SchoolApplication.class, args);
 	}
