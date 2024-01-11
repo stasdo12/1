@@ -16,7 +16,7 @@
 
 
 </head>
-<body style="background-color: #000000">
+<body>
 
 
 <!-- Navbar -->
@@ -42,8 +42,10 @@ font-family: montserrat, sans-serif" th:text="#{nav.about}">Про нас</a>
                            style="color: white;font-family: montserrat, sans-serif" th:text="#{nav.course}">Курс</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link navigation" href="#form"
-                           style="color: white;font-family: montserrat, sans-serif" th:text="#{nav.cost}">Ціна</a>
+                        <a class="nav-link navigation"
+                           href="https://sd-school.notion.site/FAQ-b22aa3063d8a46ec8270006fcad4cbc7"
+                           style="color: white;font-family: montserrat, sans-serif" th:text="#{nav.cost}"
+                           target="_blank">Ціна</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link navigation" href="#features"
@@ -70,7 +72,6 @@ font-family: montserrat, sans-serif" th:text="#{nav.about}">Про нас</a>
         </div>
     </div>
 </nav>
-
 
 
 <!-- Hero Section -->
@@ -106,7 +107,7 @@ font-family: montserrat, sans-serif" th:text="#{nav.about}">Про нас</a>
                         <span style="font-family: montserrat, sans-serif" th:text="#{form.main.text}">CONTACT</span>
                         <span style="font-family: montserrat, sans-serif" th:text="#{form.main.text1}">US</span>
                     </div>
-                    <div class="app-contact" style="font-family: montserrat, sans-serif"
+                    <div class="app-contact" style="font-family: montserrat, sans-serif; font-size: 10px"
                          th:text="#{form.main.contact.info}">CONTACT INFO : +62 81 314 928
                         595
                     </div>
@@ -121,11 +122,9 @@ font-family: montserrat, sans-serif" th:text="#{nav.about}">Про нас</a>
                                        class="app-form-control" th:placeholder="#{form.name}" required>
                             </div>
                             <div class="app-form-group">
-                                <label for="contactNo" style="font-family: montserrat, sans-serif"
-                                       th:text="#{form.phone}">Contact No:</label>
-                                <input style="font-family: montserrat, sans-serif" id="contactNo" name="phone"
-                                       class="app-form-control" th:placeholder="#{form.phone}"
-                                       required>
+                                <label for="contactNo" style="font-family: montserrat, sans-serif" th:text="#{form.phone}">Contact No:</label>
+                                <input style="font-family: montserrat, sans-serif" id="contactNo" name="phone" class="app-form-control"
+                                       th:placeholder="#{form.phone}" required pattern="[0-9]+" title="Please enter only digits">
                             </div>
                             <div class="app-form-group buttons">
                                 <button style="font-family: montserrat, sans-serif" type="submit"
@@ -156,6 +155,7 @@ font-family: montserrat, sans-serif" th:text="#{nav.about}">Про нас</a>
         </div>
     </div>
 </div>
+
 
 <!-- About Section -->
 
@@ -245,7 +245,7 @@ font-family: montserrat, sans-serif" th:text="#{nav.about}">Про нас</a>
                     </li>
                     <li class="ml-4 text-white " style="font-family: montserrat, sans-serif"
                         th:text="#{course.practical.title11}">- Сертифікований диплом із
-                        позначкою "Базовий курс"
+                        позначкою " Базовий курс"
                     </li>
                 </ul>
             </div>
@@ -272,15 +272,15 @@ font-family: montserrat, sans-serif" th:text="#{nav.about}">Про нас</a>
                 <!-- Instagram Icons with FontAwesome -->
                 <div class="d-flex mt-3">
                     <a href="https://www.instagram.com/irene.red.tattoo/" target="_blank" class="text-white">
-                        <i class="fab fa-instagram" style="color: #f181af"> irene.red.tattoo</i>
+                        <i class="fab fa-instagram" style="color: #f181af; "> irene.red.tattoo</i>
                     </a>
                     <a href="https://www.instagram.com/kisha.tattoo/" target="_blank" class="text-white ml-3">
-                        <i class="fab fa-instagram" style="color: #f181af"> kisha.tattoo</i>
+                        <i class="fab fa-instagram" style="color: #f181af; "> kisha.tattoo</i>
                     </a>
                 </div>
             </div>
             <div class="col-lg-6">
-                <img src="/css/static/images/main_banner.JPG" class="img-fluid w-85 h-95" alt="Masters">
+                <img src="/css/static/images/main_banner.webp" class="img-fluid w-85 h-95" alt="Masters">
 
 
             </div>
@@ -300,9 +300,26 @@ font-family: montserrat, sans-serif" th:text="#{nav.about}">Про нас</a>
                     татуювання. Наші студенти отримують унікальну можливість вивчати майстерство від видатних
                     професіоналів, таких як KISHA та IrenRed. Вони активно застосовують знання, отримані під час курсу,
                     та розвивають свій власний творчий підхід до світу татуювання.</p>
+                <div class="d-flex mt-3">
+                    <a href="https://www.instagram.com/alesiamarkelova.tattoo/" target="_blank" class="text-white">
+                        <i class="fab fa-instagram" style="color: #f181af; "> alesiamarkelova.tattoo</i>
+
+                    </a>
+                    <br><br/>
+                    <a href="https://www.instagram.com/maryko_tattoo/" target="_blank" class="text-white ml-3">
+                        <i class="fab fa-instagram" style="color: #f181af; "> maryko_tattoo</i>
+                    </a>
+                    <a href="https://www.instagram.com/titov_tattoo.kh/" target="_blank" class="text-white ml-3">
+                        <i class="fab fa-instagram" style="color: #f181af; "> titov_tattoo.kh</i>
+                    </a>
+                    <a href="https://www.instagram.com/felis__tattoo" target="_blank" class="text-white ml-3">
+                        <i class="fab fa-instagram" style="color: #f181af; "> felis__tattoo </i>
+                    </a>
+                </div>
             </div>
+
             <div class="col-lg-6">
-                <img src="/css/static/images/student.jpg" class="img-fluid" alt="About Us">
+                <img src="/css/static/images/masha_one_more_time.webp" class="img-fluid" alt="About Us">
             </div>
         </div>
     </div>
@@ -315,31 +332,32 @@ font-family: montserrat, sans-serif" th:text="#{nav.about}">Про нас</a>
 <div class="container mt-5">
     <div class="row">
         <div class="col-md-6">
-            <img src="/css/static/images/main_banner.JPG" class="img-fluid" alt="Largest Photo" data-toggle="modal"
+            <img src="/css/static/images/gallery_main_photo.webp" class="img-fluid" alt="Largest Photo"
+                 data-toggle="modal"
                  data-target="#photoModal1">
         </div>
         <div class="col-md-6">
             <div class="row">
                 <div class="col-md-6">
-                    <img src="/css/static/images/main_banner.JPG" class="img-fluid" alt="Medium Photo 1"
+                    <img src="/css/static/images/Ira.webp" class="img-fluid" alt="Medium Photo 1"
                          data-toggle="modal" data-target="#photoModal2">
                 </div>
                 <div class="col-md-6">
-                    <img src="/css/static/images/main_banner.JPG" class="img-fluid" alt="Medium Photo 2"
+                    <img src="/css/static/images/sanya.webp" class="img-fluid" alt="Medium Photo 2"
                          data-toggle="modal" data-target="#photoModal3">
                 </div>
             </div>
             <div class="row mt-3">
                 <div class="col-md-4">
-                    <img src="/css/static/images/main_banner.JPG" class="img-fluid" alt="Small Photo 1"
+                    <img src="/css/static/images/together.webp" class="img-fluid" alt="Small Photo 1"
                          data-toggle="modal" data-target="#photoModal4">
                 </div>
                 <div class="col-md-4">
-                    <img src="/css/static/images/main_banner.JPG" class="img-fluid" alt="Small Photo 2"
+                    <img src="/css/static/images/igli.webp" class="img-fluid" alt="Small Photo 2"
                          data-toggle="modal" data-target="#photoModal5">
                 </div>
                 <div class="col-md-4">
-                    <img src="/css/static/images/igli.JPG" class="img-fluid" alt="Small Photo 3"
+                    <img src="/css/static/images/mask.webp" class="img-fluid" alt="Small Photo 3"
                          data-toggle="modal" data-target="#photoModal6">
                 </div>
             </div>
@@ -353,7 +371,7 @@ font-family: montserrat, sans-serif" th:text="#{nav.about}">Про нас</a>
     <div class="modal-dialog modal-lg" role="document">
         <div class="modal-content">
             <div class="modal-body">
-                <img src="/css/static/images/main_banner.JPG" class="img-fluid" alt="Largest Photo">
+                <img src="/css/static/images/gallery_main_photo.webp" class="img-fluid" alt="Largest Photo">
             </div>
         </div>
     </div>
@@ -363,7 +381,7 @@ font-family: montserrat, sans-serif" th:text="#{nav.about}">Про нас</a>
     <div class="modal-dialog modal-lg" role="document">
         <div class="modal-content">
             <div class="modal-body">
-                <img src="/css/static/images/main_banner.JPG" class="img-fluid" alt="Largest Photo">
+                <img src="/css/static/images/Ira.webp" class="img-fluid" alt="Largest Photo">
             </div>
         </div>
     </div>
@@ -374,7 +392,7 @@ font-family: montserrat, sans-serif" th:text="#{nav.about}">Про нас</a>
     <div class="modal-dialog modal-lg" role="document">
         <div class="modal-content">
             <div class="modal-body">
-                <img src="/css/static/images/main_banner.JPG" class="img-fluid" alt="Largest Photo">
+                <img src="/css/static/images/sanya.webp" class="img-fluid" alt="Largest Photo">
             </div>
         </div>
     </div>
@@ -384,7 +402,7 @@ font-family: montserrat, sans-serif" th:text="#{nav.about}">Про нас</a>
     <div class="modal-dialog modal-lg" role="document">
         <div class="modal-content">
             <div class="modal-body">
-                <img src="/css/static/images/main_banner.JPG" class="img-fluid" alt="Largest Photo">
+                <img src="/css/static/images/together.webp" class="img-fluid" alt="Largest Photo">
             </div>
         </div>
     </div>
@@ -394,7 +412,7 @@ font-family: montserrat, sans-serif" th:text="#{nav.about}">Про нас</a>
     <div class="modal-dialog modal-lg" role="document">
         <div class="modal-content">
             <div class="modal-body">
-                <img src="/css/static/images/main_banner.JPG" class="img-fluid" alt="Largest Photo">
+                <img src="/css/static/images/igli.webp" class="img-fluid" alt="Largest Photo">
             </div>
         </div>
     </div>
@@ -404,7 +422,7 @@ font-family: montserrat, sans-serif" th:text="#{nav.about}">Про нас</a>
     <div class="modal-dialog modal-lg" role="document">
         <div class="modal-content">
             <div class="modal-body">
-                <img src="/css/static/images/igli.JPG" class="img-fluid" alt="Largest Photo">
+                <img src="/css/static/images/mask.webp" class="img-fluid" alt="Largest Photo">
             </div>
         </div>
     </div>
@@ -429,7 +447,7 @@ font-family: montserrat, sans-serif" th:text="#{nav.about}">Про нас</a>
                     докладають всіх зусиль, щоб забезпечити наших студентів найвищою якістю навчання.</p>
             </div>
             <div class="col-lg-6">
-                <img src="/css/static/images/about_us.JPG" class="img-fluid" alt="About Us" width="600" height="400">
+                <img src="/css/static/images/about_us.webp" class="img-fluid" alt="About Us" width="600" height="400">
             </div>
         </div>
     </div>
@@ -441,7 +459,8 @@ font-family: montserrat, sans-serif" th:text="#{nav.about}">Про нас</a>
             <div class="col-lg-4">
                 <div class="card mb-4">
                     <div class="card-body">
-                        <h5 class="card-title" style="font-family: montserrat, sans-serif; font-weight: bold" >Експертність
+                        <h5 class="card-title" style="font-family: montserrat, sans-serif; font-weight: bold">
+                            Експертність
                             майстрів:</h5>
                         <p class="card-text" style="font-family: montserrat, sans-serif">Наші учні отримають найкращі
                             навчальні матеріали та відокремлені уроки від визнаних професіоналів татуювання, таких як
@@ -453,7 +472,8 @@ font-family: montserrat, sans-serif" th:text="#{nav.about}">Про нас</a>
             <div class="col-lg-4">
                 <div class="card mb-4">
                     <div class="card-body">
-                        <h5 class="card-title" style="font-family: montserrat, sans-serif; font-weight: bold" >Репутація та досвід студії
+                        <h5 class="card-title" style="font-family: montserrat, sans-serif; font-weight: bold">Репутація
+                            та досвід студії
                             Скиндрімс: </h5>
                         <p class="card-text" style="font-family: montserrat, sans-serif">Школа татуювання пов'язана зі
                             студією Скиндрімс, яка працює на ринку вже 10 років і має сотні задоволених клієнтів. Ви
@@ -464,7 +484,8 @@ font-family: montserrat, sans-serif" th:text="#{nav.about}">Про нас</a>
             <div class="col-lg-4">
                 <div class="card mb-4">
                     <div class="card-body">
-                        <h5 class="card-title" style="font-family: montserrat, sans-serif; font-weight: bold" >Індивідуальний підхід та
+                        <h5 class="card-title" style="font-family: montserrat, sans-serif; font-weight: bold">
+                            Індивідуальний підхід та
                             підтримка:</h5>
                         <p class="card-text" style="font-family: montserrat, sans-serif">Наша школа прагне створити
                             комфортне навчальне середовище для кожного студента. Заняття проводяться в невеликих групах,
@@ -482,10 +503,11 @@ font-family: montserrat, sans-serif" th:text="#{nav.about}">Про нас</a>
         <div class="row">
             <div class="col-12 mb-4">
                 <hr style="color: white; background-color: white">
-                <h2 class="text-white">Contact Us</h2>
+                <h2 class="text-white" th:text="#{nav.contacts}"></h2>
                 <ul>
                     <li>Phone: (063) 953-9901</li>
-                    <li>Email: SkinDreams.tattoo</li>
+                    <li>Phone: (099) 049-3703</li>
+                    <li>Email: stanislavdonetc@gmail.com </li>
                 </ul>
                 <!-- Social Media Icons -->
                 <div class="d-flex mt-3 col-lg-8">
@@ -505,7 +527,7 @@ font-family: montserrat, sans-serif" th:text="#{nav.about}">Про нас</a>
                 <div class="embed-responsive embed-responsive-16by9">
                     <iframe
                             class="embed-responsive-item"
-                            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d12345.67890!2d-71.0600001!3d42.3600002!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0:0x0!2zNDLCsDA2JzAwLjAiTiA3McKwNTYnMTkuMCJX!5e0!3m2!1sen!2sus!4v1564853473895!5m2!1sen!2sus"
+                            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2564.5473841766884!2d36.237110876070076!3d50.001094719617136!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4127a0e7c08d9785%3A0x48e48fd5710cd8da!2z0YPQuy4g0JDQu9GH0LXQstGB0LrQuNGFLCA2LCDQpdCw0YDRjNC60L7Qsiwg0KXQsNGA0YzQutC-0LLRgdC60LDRjyDQvtCx0LvQsNGB0YLRjCwgNjEwMDA!5e0!3m2!1sru!2sua!4v1704894759652!5m2!1sru!2sua"
                             width="100%" height="300" frameborder="0" style="border:0;" allowfullscreen=""></iframe>
                 </div>
             </div>

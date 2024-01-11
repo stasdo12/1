@@ -33,5 +33,4 @@ public class SchoolController {
         clientService.saveClient(client);
         return "redirect:/";
     }
-
 }

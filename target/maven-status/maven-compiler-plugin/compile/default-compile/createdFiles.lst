@@ -1,7 +1,8 @@
+com\skinDreams\School\controllers\HealthCheckController.class
+com\skinDreams\School\SchoolApplication.class
 com\skinDreams\School\controllers\SchoolController.class
 com\skinDreams\School\entity\Client$ClientBuilder.class
 com\skinDreams\School\repo\ClientRepository.class
 com\skinDreams\School\entity\Client.class
-com\skinDreams\School\SchoolApplication.class
 com\skinDreams\School\config\AppConfig.class
 com\skinDreams\School\service\ClientService.class
