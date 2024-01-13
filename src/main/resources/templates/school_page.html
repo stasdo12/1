@@ -2,9 +2,14 @@
 <html lang="en" xmlns:th="http://www.thymeleaf.org">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" title="Tattoo School" content="width=device-width, initial-scale=1.0">
-    <title>SD School</title>
+    <meta name="viewport" title="Найкраща Тату Школа ✌ " content="width=device-width, initial-scale=1.0">
+    <meta name="description" content=" Відкрий для себе світ тату мистецтва разом із SD-School в Харкові ✌">
+    <meta name="keywords" content="Тату курс, теорія тату, практика тату, тату школа, тату курси, навчитися тату, тату уроки ">
+    <meta name="author" content="SD-School">
+    <title>Найкраща Тату Школа SD_SCHOOL✌</title>
 
+    <link rel="icon" type="image/png" sizes="16x16" href="/css/static/images/favicon-16x16.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/css/static/images/favicon-32x32.png">
     <!-- Include Bootstrap via CDN (Bootstrap 4) -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/flag-icon-css/3.5.0/css/flag-icon.min.css"
           integrity="flag-icon.min.css"
@@ -34,39 +39,28 @@
             <div class="collapse navbar-collapse" id="navbarNav">
                 <ul class="navbar-nav ml-auto">
                     <li class="nav-item">
-                        <a class="nav-link navigation" href="#about" style="color: white;
-font-family: montserrat, sans-serif" th:text="#{nav.about}">Про нас</a>
+                        <a class="nav-link navigation" href="#about" style="color: white; font-family: montserrat, sans-serif" th:text="#{nav.about}">Про нас</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link navigation" href="#course"
-                           style="color: white;font-family: montserrat, sans-serif" th:text="#{nav.course}">Курс</a>
+                        <a class="nav-link navigation" href="#course" style="color: white; font-family: montserrat, sans-serif" th:text="#{nav.course}">Курс</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link navigation"
-                           href="https://sd-school.notion.site/FAQ-b22aa3063d8a46ec8270006fcad4cbc7"
-                           style="color: white;font-family: montserrat, sans-serif" th:text="#{nav.cost}"
-                           target="_blank">Ціна</a>
+                        <a class="nav-link navigation" href="https://sd-school.notion.site/FAQ-b22aa3063d8a46ec8270006fcad4cbc7" style="color: white; font-family: montserrat, sans-serif" th:text="#{nav.cost}" target="_blank">Ціна</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link navigation" href="#features"
-                           style="color: white;font-family: montserrat, sans-serif"
-                           th:text="#{nav.advantages}">Переваги</a>
+                        <a class="nav-link navigation" href="#features" style="color: white; font-family: montserrat, sans-serif" th:text="#{nav.advantages}">Переваги</a>
                     </li>
                     <li class="nav-item navigation">
-                        <a class="nav-link navigation" href="#footer"
-                           style="color: white;font-family: montserrat, sans-serif"
-                           th:text="#{nav.contacts}">Контакти</a>
+                        <a class="nav-link navigation" href="#footer" style="color: white; font-family: montserrat, sans-serif" th:text="#{nav.contacts}">Контакти</a>
                     </li>
                     <li class="nav-item">
                         <a th:href="@{'?locale=en'}" style="background-color: black" class="language-icon btn btn-link">
                             <span class="flag-icon flag-icon-us"></span>
                         </a>
-                        <a th:href="@{'?locale=ukr'}" style="background-color: black"
-                           class="language-icon btn btn-link">
+                        <a th:href="@{'?locale=ukr'}" style="background-color: black" class="language-icon btn btn-link">
                             <span class="flag-icon flag-icon-ua"></span>
                         </a>
                     </li>
-
                 </ul>
             </div>
         </div>
@@ -74,8 +68,10 @@ font-family: montserrat, sans-serif" th:text="#{nav.about}">Про нас</a>
 </nav>
 
 
+
 <!-- Hero Section -->
 <header class="hero bg-black text-center py-5">
+
     <div class="container">
         <hr style="color: white; background-color: white">
         <h1 id="changing-text" class="display-4">Хочеш стати тату майстром</h1>
@@ -101,7 +97,7 @@ font-family: montserrat, sans-serif" th:text="#{nav.about}">Про нас</a>
                 </div>
             </div>
             <hr>
-            <div class="screen-body">
+            <div class="screen-body" id="success">
                 <div class="screen-body-item left">
                     <div class="app-title">
                         <span style="font-family: montserrat, sans-serif" th:text="#{form.main.text}">CONTACT</span>
@@ -119,7 +115,9 @@ font-family: montserrat, sans-serif" th:text="#{nav.about}">Про нас</a>
                             <div class="app-form-group">
                                 <label for="name" style="font-family: montserrat, sans-serif" th:text="#{form.name}">Name:</label>
                                 <input style="font-family: montserrat, sans-serif" id="name" name="name"
-                                       class="app-form-control" th:placeholder="#{form.name}" required>
+                                       class="app-form-control" th:placeholder="#{form.name}" required/>
+                                <p id="error" style="color: red" th:if="${#fields.hasErrors('name')}"
+                                   th:errors="*{name}">Name error</p>
                             </div>
                             <div class="app-form-group">
                                 <label for="contactNo" style="font-family: montserrat, sans-serif"
@@ -127,6 +125,8 @@ font-family: montserrat, sans-serif" th:text="#{nav.about}">Про нас</a>
                                 <input style="font-family: montserrat, sans-serif" id="contactNo" name="phone"
                                        class="app-form-control"
                                        th:placeholder="#{form.phone}" required pattern="[0-9+]+" title="0990999999">
+                                <p style="color: red" th:if="${#fields.hasErrors('phone')}"
+                                   th:errors="*{phone}">Phone error</p>
                             </div>
                             <div class="app-form-group buttons">
                                 <button style="font-family: montserrat, sans-serif" type="submit"
@@ -134,6 +134,9 @@ font-family: montserrat, sans-serif" th:text="#{nav.about}">Про нас</a>
                                 </button>
                             </div>
                         </form>
+                        <div id="successMessage" th:if="${successMessage}" class="alert alert-success" role="alert">
+                            <p th:text="${successMessage}"></p>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -159,9 +162,6 @@ font-family: montserrat, sans-serif" th:text="#{nav.about}">Про нас</a>
 </div>
 
 
-<!-- About Section -->
-
-
 <section id="course" class="py-5">
     <div class="container">
         <div class="row">
@@ -170,44 +170,34 @@ font-family: montserrat, sans-serif" th:text="#{nav.about}">Про нас</a>
                     <li class="d-flex align-items-center">
                         <span class="dot"></span>
                         <h4 class="text-white ml-2 mb-0" style="font-family: montserrat, sans-serif"
-                            th:text="#{course.theory.main}">Теоретична
-                            частина</h4>
+                            th:text="#{course.theory.main}"></h4>
                     </li>
                     <li class="ml-4 text-white " style="font-family: montserrat, sans-serif"
-                        th:text="#{course.theory.title1}">- Введення в татуювання:
-                        стилі, техніки та матеріали.
+                        th:text="#{course.theory.title1}">
                     </li>
                     <li class="ml-4 text-white " style="font-family: montserrat, sans-serif"
-                        th:text="#{course.theory.title2}">- Огляд необхідних
-                        інструментів та обладнання для татуювання.
+                        th:text="#{course.theory.title2}">
                     </li>
                     <li class="ml-4 text-white " style="font-family: montserrat, sans-serif"
-                        th:text="#{course.theory.title3}">- Основні принципи гігієни
-                        та безпеки у татуювальній справі.
+                        th:text="#{course.theory.title3}">
                     </li>
                     <li class="ml-4 text-white " style="font-family: montserrat, sans-serif"
-                        th:text="#{course.theory.title4}">- Розміри голок та їх
-                        застосування у різних видах татуювання.
+                        th:text="#{course.theory.title4}">
                     </li>
                     <li class="ml-4 text-white " style="font-family: montserrat, sans-serif"
-                        th:text="#{course.theory.title5}">- Як готується до тату, та
-                        правила загоєння після сеансу.
+                        th:text="#{course.theory.title5}">
                     </li>
                     <li class="ml-4 text-white " style="font-family: montserrat, sans-serif"
-                        th:text="#{course.theory.title6}">- Хвороби, їх різновид,
-                        протипоказання тату.
+                        th:text="#{course.theory.title6}">
                     </li>
                     <li class="ml-4 text-white " style="font-family: montserrat, sans-serif"
-                        th:text="#{course.theory.title8}">- Робота зі шрамами,
-                        розтяжками, родимками, бородавками.
+                        th:text="#{course.theory.title8}">
                     </li>
                     <li class="ml-4 text-white " style="font-family: montserrat, sans-serif"
-                        th:text="#{course.theory.title9}">- Підготовка столика,
-                        робочого місця, кушетки клієнта.
+                        th:text="#{course.theory.title9}">
                     </li>
                     <li class="ml-4 text-white " style="font-family: montserrat, sans-serif"
-                        th:text="#{course.theory.title10}">- Спілкування з клієнтом,
-                        психологія.
+                        th:text="#{course.theory.title10}">
                     </li>
                 </ul>
             </div>
@@ -216,38 +206,31 @@ font-family: montserrat, sans-serif" th:text="#{nav.about}">Про нас</a>
                     <li class="d-flex align-items-center">
                         <span class="dot"></span>
                         <h4 class="text-white ml-2 mb-0" style="font-family: montserrat, sans-serif"
-                            th:text="#{course.practical.main}">Практична
-                            частина</h4>
+                            th:text="#{course.practical.main}"></h4>
                     </li>
                     <li class="ml-4 text-white " style="font-family: montserrat, sans-serif"
-                        th:text="#{course.practical.title1}">- Відпрацювання ескізу на
-                        штучній шкірі: прості ескізи, контурні роботи, написи – на вибір учня.
+                        th:text="#{course.practical.title1}">
                     </li>
                     <li class="ml-4 text-white " style="font-family: montserrat, sans-serif"
-                        th:text="#{course.practical.title2}">- Робота з контуром і
-                        щільним пофарбуванням ЧБ.
+                        th:text="#{course.practical.title2}">
                     </li>
                     <li class="ml-4 text-white " style="font-family: montserrat, sans-serif"
-                        th:text="#{course.practical.title3}">- Робота на моделях із
-                        куратором.
+                        th:text="#{course.practical.title3}">
                     </li>
                     <li class="ml-4 text-white " style="font-family: montserrat, sans-serif"
-                        th:text="#{course.practical.title6}">- Домашнє завдання
+                        th:text="#{course.practical.title6}">
                     </li>
                     <li class="ml-4 text-white " style="font-family: montserrat, sans-serif"
-                        th:text="#{course.practical.title7}">- Випускна робота.
+                        th:text="#{course.practical.title7}">
                     </li>
                     <li class="ml-4 text-white " style="font-family: montserrat, sans-serif"
-                        th:text="#{course.practical.title8}">- Персональний менеджер,
-                        який допоможе з будь-яким питанням.
+                        th:text="#{course.practical.title8}">
                     </li>
                     <li class="ml-4 text-white " style="font-family: montserrat, sans-serif"
-                        th:text="#{course.practical.title10}">- Витратні матеріали
-                        входять у вартість навчання.
+                        th:text="#{course.practical.title10}">
                     </li>
                     <li class="ml-4 text-white " style="font-family: montserrat, sans-serif"
-                        th:text="#{course.practical.title11}">- Сертифікований диплом із
-                        позначкою " Базовий курс"
+                        th:text="#{course.practical.title11}">
                     </li>
                 </ul>
             </div>
@@ -294,10 +277,14 @@ font-family: montserrat, sans-serif" th:text="#{nav.about}">Про нас</a>
     <div class="container">
         <div class="row">
             <div class="col-lg-6">
+                <img src="/css/static/images/masha_one_more_time.webp" class="img-fluid" alt="About Us">
+            </div>
+
+            <div class="col-lg-6">
                 <h2 class="text-white" style="font-family: montserrat, sans-serif" th:text="#{student.title}">
                     Students</h2>
                 <p class="text-white" style="font-family: montserrat, sans-serif">На нашому курсі татуювання ви знайдете
-                    групу талановитих і що прагне (лине, прямує) студентів, які діляться спільною пристрасть до
+                    групу талановитих і що прагне (лине, прямує) студентів, які діляться спільною пристрастью до
                     творчості та мистецтва
                     татуювання. Наші студенти отримують унікальну можливість вивчати майстерство від видатних
                     професіоналів, таких як KISHA та IrenRed. Вони активно застосовують знання, отримані під час курсу,
@@ -314,13 +301,11 @@ font-family: montserrat, sans-serif" th:text="#{nav.about}">Про нас</a>
                     </a>
                 </div>
             </div>
-
-            <div class="col-lg-6">
-                <img src="/css/static/images/masha_one_more_time.webp" class="img-fluid" alt="About Us">
-            </div>
         </div>
     </div>
 </section>
+
+
 
 
 <!-- About Section -->
@@ -495,6 +480,40 @@ font-family: montserrat, sans-serif" th:text="#{nav.about}">Про нас</a>
 </section>
 
 
+
+<!-- Cost -->
+<section id="cost" class="py-5">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-6">
+                <img src="/css/static/images/cost.webp" class="img-fluid" alt="About Us" height="1000px">
+            </div>
+
+            <div class="col-lg-6">
+                <h2 class="mb-4" style="font-family: montserrat, sans-serif; color: #ffa4bd;">Ціна - 1500$</h2>
+                <h2 class="text-white" style="font-family: montserrat, sans-serif;">В вартість курсу входить:</h2>
+                <ul class="list-unstyled text-white" style="font-family: montserrat, sans-serif;">
+                    <li> - Безпровідна тату машинка</li>
+                    <li> - Всі росхідні матеріали (як для занять на штучній шкірі так і на моделях)</li>
+                    <li> - 8 годин теорії</li>
+                    <li> - 18 годин практики на штучній шкірі</li>
+                    <li> - 18 годин практики на моделях</li>
+                    <li> - Курс маркетингу (Продай себе як майстер)</li>
+                    <li> - Домашні завдання для вдосконалення малюнку</li>
+                    <li> - Можливість працювати в студії SkinDreams після успішного завершення курсу</li>
+                    <li> - Диплом</li>
+                    <li> - Підписка на Midjourney та ProCreatePocket</li>
+                    <li> - Затишна атмосфера 💕💕</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+
+
+
 <section id="footer" class="py-5" style="background-color: black; color: #fff;">
     <div class="container">
         <div class="row">
@@ -502,8 +521,8 @@ font-family: montserrat, sans-serif" th:text="#{nav.about}">Про нас</a>
                 <hr style="color: white; background-color: white">
                 <h2 class="text-white" th:text="#{nav.contacts}"></h2>
                 <ul>
-                    <li>Phone: (063) 953-9901</li>
-                    <li>Phone: (099) 049-3703</li>
+                    <li> <a style="color: white" href="tel:+380639539901">Phone: (063) 953-9901</a></li>
+                    <li> <a style="color: white" href="tel:+380990493703">Phone: (099) 049-3703</a></li>
                     <li>Email: stanislavdonetc@gmail.com</li>
                 </ul>
                 <!-- Social Media Icons -->

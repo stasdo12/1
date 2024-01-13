@@ -34,8 +34,9 @@ public class Client implements Serializable {
     private String name;
 
 
-    @NotEmpty(message = "Phone should not be empty")
+    @NotEmpty(message = "Phone should not be empty and contain only number!")
     @Column(name = "phone")
+    @Size(min = 10, max = 13, message = "Phone should be between 10 and 13 characters")
     private String phone;
 
 
