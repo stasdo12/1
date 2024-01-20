@@ -49,7 +49,7 @@
                     </li>
                     <li class="nav-item">
                         <a class="nav-link navigation"
-                           href="https://sd-school.notion.site/FAQ-b22aa3063d8a46ec8270006fcad4cbc7"
+                           href="#cost"
                            style="color: white; font-family: montserrat, sans-serif" th:text="#{nav.cost}"
                            target="_blank">Ціна</a>
                     </li>
@@ -63,13 +63,16 @@
                            th:text="#{nav.contacts}">Контакти</a>
                     </li>
                     <li class="nav-item">
-                        <a th:href="@{'?locale=en'}" style="background-color: black" class="language-icon btn btn-link">
+                        <a th:href="@{'?locale=en'}" style="background-color: black; margin-right: -5px;" class="language-icon btn btn-link">
                             <span class="flag-icon flag-icon-us"></span>
                         </a>
-                        <a th:href="@{'?locale=ukr'}" style="background-color: black"
+                        <a th:href="@{'?locale=ukr'}" style="background-color: black;   margin-right: 15px"
                            class="language-icon btn btn-link">
                             <span class="flag-icon flag-icon-ua"></span>
                         </a>
+                    </li>
+                    <li class="nav-item">
+                            <a href="tel:+380639539901"  class="text-white"><i class="fas fa-phone" style="color: #f181af; margin-top: 10px"></i></a>
                     </li>
                 </ul>
             </div>
@@ -79,7 +82,7 @@
 
 
 <!-- Hero Section -->
-<header class="hero bg-black text-center py-5">
+<header class="hero bg-black text-center py-2 header-custom">
 
     <div class="container">
         <hr style="color: white; background-color: white">
@@ -124,7 +127,7 @@
                             <div class="app-form-group">
                                 <label for="name" style="font-family: montserrat, sans-serif" th:text="#{form.name}">Name:</label>
                                 <input style="font-family: montserrat, sans-serif" id="name" name="name"
-                                       class="app-form-control" th:placeholder="#{form.name}" required/>
+                                       class="app-form-control" required/>
                                 <p id="error" style="color: red" th:if="${#fields.hasErrors('name')}"
                                    th:errors="*{name}">Name error</p>
                             </div>
@@ -132,8 +135,7 @@
                                 <label for="contactNo" style="font-family: montserrat, sans-serif"
                                        th:text="#{form.phone}">Contact No:</label>
                                 <input style="font-family: montserrat, sans-serif" id="contactNo" name="phone"
-                                       class="app-form-control"
-                                       th:placeholder="#{form.phone}" required pattern="[0-9+]+" title="0990999999">
+                                       class="app-form-control" required pattern="[0-9+]+" title="0990999999">
                                 <p style="color: red" th:if="${#fields.hasErrors('phone')}"
                                    th:errors="*{phone}">Phone error</p>
                             </div>
